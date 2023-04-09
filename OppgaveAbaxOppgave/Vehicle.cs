@@ -22,7 +22,7 @@ internal abstract class Vehicle
     }
     public virtual bool IsSameVehicle(Vehicle vehicle)
     {
-        if (_vehicleType != vehicle._vehicleType)
+        if (vehicle == null || _vehicleType != vehicle._vehicleType)
             return false;
         else if (_registrationNumber != vehicle._registrationNumber && _power != vehicle._power)
             return false;
