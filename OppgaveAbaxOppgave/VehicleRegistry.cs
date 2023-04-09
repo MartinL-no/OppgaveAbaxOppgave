@@ -2,7 +2,7 @@
 
 internal class VehicleRegistry
 {
-    private List<Vehicle> _vehicles { get; }
+    private readonly List<Vehicle> _vehicles;
     internal VehicleRegistry()
     {
         _vehicles = new List<Vehicle>();
