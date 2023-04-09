@@ -30,7 +30,7 @@ internal class VehicleRegistry
 
         // Compare the two cars above to check if they are the same vehicle
         Console.Write("Comparing car one and car two: ");
-        CompareCars((Car)carOne, (Car)carTwo);
+        CompareCars(carOne, carTwo);
 
         // ask the plane to fly and print this in the console
         Console.WriteLine(plane.Move());
