@@ -3,7 +3,7 @@
 internal class Car : Vehicle
 {
     private readonly int _maxSpeed;
-    public readonly string _colour;
+    private readonly string _colour;
     public Car(string registrationNumber, int power, int maxSpeed, string colour, VehicleType vehicleType) : 
         base(registrationNumber, power, vehicleType)
     {
