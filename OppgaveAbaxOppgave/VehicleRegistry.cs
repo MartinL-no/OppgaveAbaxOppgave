@@ -14,10 +14,11 @@ internal class VehicleRegistry
     }
     public void Run()
     {
-        var carOne = AddVehicle(new Car("NF123456", 147, 200, "green"));
-        var carTwo = AddVehicle(new Car("NF654321", 150, 195, "blue"));
-        var plane = AddVehicle(new Plane("LN1234", 1000, 30, 2, 10));
-        var boat = AddVehicle(new Boat("ABC123", 100, 30, 500));
+        var carOne = AddVehicle(new Car("NF123456", 147, 200, "green", VehicleType.LightVehicle));
+        var carTwo = AddVehicle(new Car("NF654321", 150, 195, "blue", VehicleType.LightVehicle
+        ));
+        var plane = AddVehicle(new Plane("LN1234", 1000, 30, 2, 10, VehicleType.Jet));
+        var boat = AddVehicle(new Boat("ABC123", 100, 30, 500, VehicleType.Boat));
 
         // Print information about Car One
         Console.WriteLine(carOne.GetDescription());
