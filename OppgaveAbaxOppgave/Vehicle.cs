@@ -6,19 +6,18 @@ internal abstract class Vehicle
 {
     protected string _registrationNumber;
     protected int _power;
-    protected bool _isMoving;
     protected VehicleType _vehicleType;
-    protected string VehicleTypeString => _vehicleType == VehicleType.LightVehicle ? "Light vehicle" : _vehicleType == VehicleType.Jet ? "Jet" : "Boat";
+    private string _vehicleTypeString => _vehicleType == VehicleType.LightVehicle ? "Light vehicle" : _vehicleType == VehicleType.Jet ? "Jet" : "Boat";
+    private string _movementType => _vehicleType == VehicleType.LightVehicle ? "driving" : _vehicleType == VehicleType.Jet ? "flying" : "sailing";
     protected Vehicle(string registrationNumber, int power, VehicleType vehicleType)
     {
         _registrationNumber = registrationNumber;
         _power = power;
-        _isMoving = false;
         _vehicleType = vehicleType;
     }
     public virtual string GetDescription()
     {
-        return $"Vehicle's details are: type {VehicleTypeString}, registration number {_registrationNumber}, {_power}kw power";
+        return $"Vehicle's details are: type {_vehicleTypeString}, registration number {_registrationNumber}, {_power}kw power";
     }
     public virtual bool IsSameVehicle(Vehicle vehicle)
     {
@@ -29,5 +28,8 @@ internal abstract class Vehicle
         else
             return true;
     }
-    public abstract string Move();
+    public string Move()
+    {
+        return $"{_vehicleTypeString} is {_movementType}...";
+    }
 }

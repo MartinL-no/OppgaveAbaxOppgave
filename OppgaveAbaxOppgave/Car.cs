@@ -23,9 +23,4 @@ internal class Car : Vehicle
         else
             return true;
     }
-    public override string Move()
-    {
-        _isMoving = true;
-        return "Car is driving...";
-    }
 }

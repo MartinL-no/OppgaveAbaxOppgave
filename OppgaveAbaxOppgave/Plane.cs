@@ -28,9 +28,4 @@ internal class Plane : Vehicle
         else
             return true;
     }
-    public override string Move()
-    {
-        _isMoving = true;
-        return "Plane is flying...";
-    }
 }

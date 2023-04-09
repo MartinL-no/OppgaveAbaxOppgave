@@ -23,9 +23,4 @@ internal class Boat : Vehicle
         else
             return true;
     }
-    public override string Move()
-    {
-        _isMoving = true;
-        return "Boat is sailing...";
-    }
 }
